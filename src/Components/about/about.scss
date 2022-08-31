@@ -1,0 +1,73 @@
+@use '../../Sass/' as *;
+
+.about__container{
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    column-gap: 4rem;
+    @include largeD{
+        grid-template-columns: 1fr;
+        row-gap: 2.5rem ;
+    }
+}
+.about__img{
+    width: 350px;
+    border-radius: 1.5rem;
+    justify-self: center;
+    @include largeD{
+        width: 220px;
+
+    }
+}
+.about__info{
+    grid-template-columns: repeat(3,140px);
+    gap: 0.5rem;
+    margin-bottom: $mb-2;
+    @include largeD{
+        justify-content: center;
+    }
+    @include smallD{
+        grid-template-columns: repeat(3,1fr);
+    }
+    @include smallerD{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+.about__box{
+    background-color: $container-color;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 0.75rem;
+    padding: 1rem 1.2rem;
+    @include largeD{
+        padding: 0.75rem 0.5rem;
+    }
+}
+.about__icon{
+    font-size: 1.5rem;
+    color: $title-color;
+    margin-bottom: $mb-0-5;
+
+}
+.about__title{
+    font-size: $small-font-size;
+    font-weight: $font-medium;
+}
+.about__subtitle{
+    font-size: $tiny-font-size;
+}
+.about__description{
+    padding: 0 4rem 0 0;
+    margin-bottom: $mb-2-5;
+    @include largeD{
+        padding: 0 5rem;
+        margin-bottom: 2rem;
+    }
+    @include smallD{
+        padding: 0;
+    }
+}
+.about__data{
+    @include largeD{
+        text-align: center;
+    }
+}

@@ -1,0 +1,164 @@
+@use '../../Sass/' as *;
+.home__container{
+    row-gap: 7rem;
+
+}
+.home__content{
+    grid-template-columns: 116px repeat(2,1fr);
+    padding-top: 5.5rem;
+    column-gap: 2rem;
+    align-items: center;
+    @include largeD{
+        grid-template-columns: 100px repeat(2 , 1fr);
+        column-gap: 1.25rem
+    } 
+    @include mediumD{
+        grid-template-columns: 0.5fr 3fr;
+        padding-top: 3.5rem;
+    }
+}
+.home__social{
+    display: grid;
+    grid-template-columns: max-content;
+    row-gap: 1rem;
+}
+.home__social-icon{
+    font-size: 1.25rem;
+    color: $title-color;
+    transition: .3s;
+}
+.home__social-icon:hover{
+    color: $title-color-dark;
+}
+.home__title{
+    font-size: 45px;
+    margin-bottom: $mb-0-25;
+    @include largeD{
+        font-size: 2rem;
+    }
+    @include smallerD{
+        font-size: 1.8rem;
+    }
+}
+.home__hand{
+    width: 38px;
+    height: 38px;
+    margin-left: 0.4rem;
+    @include largeD{
+        width: 26px;
+        height: 26px;
+    } 
+    @include smallerD{
+        width: 22px;
+        height: 22px;
+    }
+}
+.home__subtitle{
+    position: relative;
+    font-size: $h3-font-size;
+    padding-left: 5.4rem;
+    font-weight: $font-normal;
+    margin-bottom: $mb-1;
+    @include largeD{
+       padding-left: 3.75rem;
+       margin-bottom: $mb-1;
+       font-size: 1rem;
+    }
+}
+.home__subtitle::before{
+    content: '';
+    position:absolute;
+    width: 70px;
+    height: 1px;background-color: $text-color;
+    left: 0;
+    top: 1rem;
+    @include largeD{
+            width: 42px;
+            top: 0.8rem;
+    }
+}
+.home__description{
+    max-width: 400px;
+    margin-bottom: $mb-3;
+    @include largeD{
+        max-width: initial;
+        margin-bottom: 2.5rem
+    } 
+}
+.home__img{
+    background: url(../../Asset/IMG_20210707_015340_720.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 0 0 0 9px rgb(255 255 255 / 30%);
+    order: 1;
+    justify-self: center;
+    width: 300px;
+    height: 300px;
+    animation: profile__animate 8s ease-in-out infinite 1s ;
+    @include largeD{
+        width: 250px;
+        height: 250px;
+        box-shadow: inset 0 0 0 8px rgb(255 255 255 / 30%);
+    }
+    @include mediumD{
+        order: initial;
+        justify-self: initial;
+        box-shadow: inset 0 0 0 6px rgb(255 255 255 / 30%);
+        width: 200px;
+        height: 200px;
+    }
+    @include smallerD{
+        width: 180px;
+        height: 180px;
+    }
+}
+.home__scroll{
+    margin-left: 9.25rem;
+    @include largeD{
+        margin-left: 7.5rem;
+    }
+    @include mediumD{
+        display: none;
+    }
+    
+    
+}
+.wheel{
+    animation:scroll 2s ease infinite ;
+}
+.home__scroll-name{
+    color: $title-color;
+    font-weight: $font-normal;
+    margin-right: $mb-0-25;
+    margin-left: 2px;
+}
+.home__scroll-arrow{
+    font-size: 1.25rem;
+    color: $title-color;
+}
+.home__data{
+    @include mediumD{
+        grid-column: 1/3;
+    }
+}
+@keyframes scroll{
+    0%{
+        transform: translateY(0);
+    }
+    30%{
+        transform: translateY(3.75rem);
+    }
+}
+@keyframes profile__animate{
+    0%{
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40% ;
+    }
+    50%{
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60% ;
+    }
+    100%{
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40% ;
+    }
+
+}

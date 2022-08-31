@@ -1,0 +1,122 @@
+@use "./sass/" as *;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,600&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+  z-index: 10000;
+  width: .5rem;
+}
+html::-webkit-scrollbar-track{
+  background-color: $body-color;
+}
+html::-webkit-scrollbar-thumb{
+  background-color: $text-color;
+  border-radius: 20px;
+}
+body{
+  @include mediumD{
+    margin: 0 0 $header-height 0;
+  }
+}
+body,
+button,
+input,
+textarea{
+  font-family: $body-font;
+}
+body{
+  background-color: $body-color;
+  color: $text-color;
+}
+h1,h2,h3{
+  color: $title-color;
+  font-weight: $font-semi-bold;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+button{
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+.section{
+  padding: 6rem 0 2rem;
+  @include mediumD{
+    padding: 2rem 0 4rem;
+  }
+}
+.section__title{
+  font-size: $h1-font-size;
+  color: $title-color;
+}
+.section__subtitle{
+  display: block;
+  font-size: $small-font-size;
+  margin-bottom: 4rem;
+  @include mediumD{
+    margin-bottom: $mb-3;
+  }
+}
+.section__title,.section__subtitle{
+  text-align: center;
+}
+.container{
+  max-width: 968px;
+  margin-left: auto;
+  margin-right: auto;
+  @include smallerD{
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+.grid{
+  display: grid;
+  gap: 1.5rem;
+}
+
+.button{
+  display: inline-block;
+  background-color: $title-color;
+  color: $container-color;
+  padding: 1.25rem 2rem;
+  border-radius:1rem;
+  font-weight: $font-medium;
+  &:hover{
+    background-color: $title-color-dark;
+  }
+  @include largeD{
+    padding: 1rem 1.75rem;
+  }
+}
+.button__icon{
+  margin-left: $mb-0-5;
+  @include largeD{
+    width: 22px;
+    height: 22px;
+  }
+}
+.button--flex{
+  display: inline-flex;
+  align-items: center;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

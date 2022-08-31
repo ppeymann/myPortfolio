@@ -1,0 +1,21 @@
+@mixin smallD {
+    @media only screen and (max-width: 576px){
+        @content;
+    }
+}
+@mixin mediumD {
+    @media only screen and (max-width: 768px){
+        @content;
+    }
+}
+@mixin largeD {
+    @media only screen and (max-width: 992px){
+        @content;
+    }
+}
+@mixin smallerD{
+    @media only screen and (max-width: 350px){
+        @content;
+        $big-font-size:2.25rem;
+    }
+}
