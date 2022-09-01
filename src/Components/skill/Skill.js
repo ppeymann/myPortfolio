@@ -1,5 +1,7 @@
 import React from 'react'
-
+import Advence from './Advence'
+import Basic from './Basic'
+import './skill.scss'
 const Skill = () => {
   return (
     <section className='skill section' id='skills'>
@@ -8,7 +10,8 @@ const Skill = () => {
         My thechnical level
       </span>
       <div className='skills__container container grid'>
-          
+          <Basic />
+          <Advence />
       </div>
     </section>
   )

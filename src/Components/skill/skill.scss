@@ -1,0 +1,57 @@
+@use '../../Sass/' as *;
+
+.skills__container{
+    grid-template-columns: repeat(2,400px);
+    column-gap: 3rem;
+    justify-content: center;
+    @include largeD{
+        grid-template-columns: max-content;
+        row-gap: 2rem;
+    }
+    @include smallD{
+        grid-template-columns: 1fr;
+    }
+}
+.skills__content{
+    background-color: $container-color;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 2rem 4rem;
+    border-radius: 1.25rem;
+    @include smallD{
+        padding: 1.5rem;
+    }
+}
+.skills__title{
+    font-size: $normal-font-size;
+    font-weight: $font-medium;
+    text-align: center;
+    margin-bottom: $mb-1-5;
+}
+.skills__box{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 4rem;
+    @include smallerD{
+        column-gap: 1.25rem;
+    }
+}
+.skills__group{
+    display: grid;
+    align-items: flex-start;
+    column-gap: 0.5rem;
+}
+.skills__data{
+    display: flex;
+    column-gap: 0.5rem;
+    margin: 0.8rem 0;
+}
+.skills .bx-bx-badge-check{
+    font-size: 1rem;
+    color: $title-color;
+}
+.skills__name{
+    font-size: $normal-font-size;
+    @include smallerD{
+        font-size: $small-font-size;
+    }
+}
